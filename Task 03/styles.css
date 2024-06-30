@@ -1,0 +1,264 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0; /* Remove default margin */
+}
+
+/* Header */
+header {
+    background: palevioletred; 
+    color: white;
+    padding: 20px 0;
+    width: 100%; /* Ensure header spans full width */
+    position: relative; /* Added position relative for positioning login link */
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-bar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar nav ul li {
+    position: relative; /* Added position relative for absolute positioning of login link */
+}
+
+.nav-bar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-bar nav ul li:last-child {
+    margin-left: auto; /* Pushes the login link to the right */
+}
+
+/* Login Link Styling */
+.nav-bar nav ul li a {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid white;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main */
+main {
+    width: 100%; /* Ensure main content spans full width */
+}
+
+.hero-section {
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 70vh; /* Adjust height to match other sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0; /* Add padding to match other sections */
+    width: 100%; /* Ensure hero section spans full width */
+}
+
+.hero-content {
+    text-align: center;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, rgba(135, 135, 249, 0.8), rgba(191, 163, 246, 0.816), rgba(191, 131, 252, 0.885)); 
+    padding: 50px 0;
+    width: 100%; /* Ensure about section spans full width */
+}
+
+.about-section h2, .gallery-section h2, .contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.about-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Gallery Section */
+.gallery-section {
+    
+    background: linear-gradient(135deg, rgba(240, 205, 119, 0.867), #f3eb5fef, rgba(244, 147, 91, 0.944)); 
+    padding: 50px 0;
+    width: 100%; /* Ensure gallery section spans full width */
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 260px;
+    height: 280px; /* Increased height to accommodate additional info */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative; /* Added position relative for absolute positioning */
+}
+
+.gallery-item .item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-item .item-info .price {
+    font-weight: bold;
+}
+
+.gallery-item .item-info .art-code {
+    font-size: 14px;
+}
+
+/* Contact Section */
+.contact-section {
+    
+    background: linear-gradient(135deg, rgba(230, 47, 126, 0.9),rgba(234, 116, 159, 0.916), rgba(246, 103, 213, 0.845)); 
+    padding: 50px 0;
+    width: 100%; /* Ensure contact section spans full width */
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-section .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-section .form-group label {
+    font-size: 16px;
+}
+
+.contact-section .form-group input, 
+.contact-section .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-section button {
+    background-color: #ffd700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact-section button:hover {
+    background-color: #ffc700;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 19px;
+}
+
+.contact-info .left-info {
+    text-align: left;
+    margin-right: auto; /* Adds margin on the right to push it to the left */
+    margin-left: 40px; /* Adds margin on the left for separation */
+    color: white;
+}
+
+.contact-info .right-info {
+    text-align: right;
+    margin-left: auto; /* Adds margin on the left to push it to the right */
+    margin-right: 40px; /* Adds margin on the right for separation */
+    color: white;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+.contact-info a {
+    color: #fbf7f7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: palevioletred;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    width: 100%; /* Ensure footer spans full width */
+}
+
+footer p {
+    font-size: 16px;
+}
